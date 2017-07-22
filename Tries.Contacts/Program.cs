@@ -37,8 +37,7 @@ namespace Tries.Contacts
 
             //toFind.Add("nrmtmci");
             //toFind.Add("ue");
-            //toFind.Add("ds");
-
+            
             var tries = new Trie(contacts.ToArray());
             foreach (var itemToFind in toFind)
             {
