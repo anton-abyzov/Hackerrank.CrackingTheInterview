@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tries.Contacts", "Tries.Contacts\Tries.Contacts.csproj", "{710DFDC1-6BB7-47EF-B99F-1D750A7CA0E0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DetectCycle", "DetectCycle\DetectCycle.csproj", "{458631A2-2B75-48D2-A909-CDE90BEC38CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{710DFDC1-6BB7-47EF-B99F-1D750A7CA0E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{710DFDC1-6BB7-47EF-B99F-1D750A7CA0E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{710DFDC1-6BB7-47EF-B99F-1D750A7CA0E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{458631A2-2B75-48D2-A909-CDE90BEC38CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{458631A2-2B75-48D2-A909-CDE90BEC38CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{458631A2-2B75-48D2-A909-CDE90BEC38CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{458631A2-2B75-48D2-A909-CDE90BEC38CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
