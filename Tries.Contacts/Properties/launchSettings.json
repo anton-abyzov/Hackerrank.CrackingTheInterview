@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Tries.Contacts": {
+      "commandName": "Project",
+      "commandLineArgs": "4 "
+    }
+  }
+}
