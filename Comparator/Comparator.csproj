@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Collections.NonGeneric">
+      <HintPath>C:\Users\User\.nuget\packages\system.collections.nongeneric\4.0.1\ref\netstandard1.3\System.Collections.NonGeneric.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
