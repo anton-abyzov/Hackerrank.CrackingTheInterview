@@ -3,6 +3,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using Xunit;
 using Xunit.Abstractions;
+using System.Collections.Generic;
 
 namespace Tests
 {
@@ -54,6 +55,16 @@ namespace Tests
             numberToRemove += a.Length + b.Length;
 
             _testOutputHelper.WriteLine(numberToRemove.ToString());
+        }
+
+        [Fact]
+        public void SequenceEqual()
+        {
+            var a = new List<int>() {1, 2, 3};
+            var b = new List<int>() {1, 3, 2};
+            a.Sort();
+            b.Sort();
+            Assert.True(a.SequenceEqual(b));
         }
 
       
