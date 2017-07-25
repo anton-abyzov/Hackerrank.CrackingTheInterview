@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinChange", "CoinChange\Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindRunningMedian", "FindRunningMedian\FindRunningMedian.csproj", "{D72DC5DA-B178-456A-A53D-7DE0D2BB48EE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShortestReachInGraph", "ShortestReachInGraph\ShortestReachInGraph.csproj", "{1D7C28D1-AD27-4834-8F1F-C7682C14A583}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{D72DC5DA-B178-456A-A53D-7DE0D2BB48EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D72DC5DA-B178-456A-A53D-7DE0D2BB48EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D72DC5DA-B178-456A-A53D-7DE0D2BB48EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D7C28D1-AD27-4834-8F1F-C7682C14A583}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D7C28D1-AD27-4834-8F1F-C7682C14A583}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D7C28D1-AD27-4834-8F1F-C7682C14A583}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D7C28D1-AD27-4834-8F1F-C7682C14A583}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
