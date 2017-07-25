@@ -1,34 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices;
 
 namespace ShortestReachInGraph
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            var q = Convert.ToByte(Console.ReadLine());
-            
-            for (int i = 0; i < q; i++)
-            {
-                var nmline = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
-                var n = nmline[0];
-                var graph = new Graph(n);
-                var m = nmline[1];
-                for (int j = 0; j < m; j++)
-                {
-                    var uvline = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
-                    var u = uvline[0];
-                    var v = uvline[1];
-                    graph.AddEdge(u, v);
-                }
-                var s = Convert.ToInt32(Console.ReadLine());
-                graph.PrintDistance(s);
-            }
-        }
-    }
+    //class Program
+    //{
+    //    static void Main(string[] args)
+    //    {
+    //        var q = Convert.ToByte(Console.ReadLine());
+
+    //        for (int i = 0; i < q; i++)
+    //        {
+    //            var nmline = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+    //            var n = nmline[0];
+    //            var graph = new Graph(n);
+    //            var m = nmline[1];
+    //            for (int j = 0; j < m; j++)
+    //            {
+    //                var uvline = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+    //                var u = uvline[0];
+    //                var v = uvline[1];
+    //                graph.AddEdge(u, v);
+    //            }
+    //            var s = Convert.ToInt32(Console.ReadLine());
+    //            graph.PrintDistance(s);
+    //            Console.WriteLine();
+    //        }
+    //    }
+    //}
 
     public class Graph
     {
@@ -36,17 +36,17 @@ namespace ShortestReachInGraph
 
         public class PriorityNode : Node
         {
-            public PriorityNode(Node node,int level) : base(node.Id, node.Adjacents)
+            public PriorityNode(Node node, int level) : base(node.Id, node.Adjacents)
             {
                 Level = level;
             }
 
-            public int Level { get;  }
+            public int Level { get; }
         }
 
         public class Node
         {
-            public Node(int id): this(id, new HashSet<Node>())
+            public Node(int id) : this(id, new HashSet<Node>())
             {
             }
 
@@ -105,7 +105,6 @@ namespace ShortestReachInGraph
             foreach (var adjacent in NodeLookup)
             {
                 if (adjacent != sourceNode)
-                //if (!adjacent.Equals(sourceNode))
                     ProcessAdjacent(sourceNode, adjacent);
             }
         }
@@ -120,7 +119,7 @@ namespace ShortestReachInGraph
                 var node = queue.Dequeue();
                 if (visited.Contains(node)) continue;
                 visited.Add(node);
-                    
+
                 if (node.Equals(adjacentToFind))
                 {
                     Console.Write("{0} ", node.Level * DistanceLength);
@@ -128,7 +127,8 @@ namespace ShortestReachInGraph
                 }
                 foreach (var nestedAdjacent in node.Adjacents)
                 {
-                    queue.Enqueue(new PriorityNode(nestedAdjacent, node.Level+1));
+                    if (!visited.Contains(nestedAdjacent))
+                        queue.Enqueue(new PriorityNode(nestedAdjacent, node.Level + 1));
                 }
             }
             Console.Write("-1 ");
