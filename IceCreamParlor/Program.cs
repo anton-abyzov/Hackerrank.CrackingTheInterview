@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 public partial class Solution
 {
@@ -37,14 +38,15 @@ public partial class Solution
     {
         for (int i = 0; i < resultedTuple.Length; i++)
         {
-            for (var j = resultedTuple.Length - 1; j > i; j--)
-                if (resultedTuple[i].Item2 + resultedTuple[j].Item2 == money)
-                {
-                    var minId = Math.Min(resultedTuple[i].Item1, resultedTuple[j].Item1);
-                    var maxId = Math.Max(resultedTuple[i].Item1, resultedTuple[j].Item1);
-                    Console.WriteLine("{0} {1}", minId, maxId);
-                    return;
-                }
+            var firstNumber = resultedTuple[i].Item2;
+            var complement = Array.BinarySearch(resultedTuple, new Tuple<int, int>(0, money - firstNumber), new TupleComparer());
+            if (complement > 0)
+            {
+                var minId = Math.Min(resultedTuple[i].Item1, resultedTuple[complement].Item1);
+                var maxId = Math.Max(resultedTuple[i].Item1, resultedTuple[complement].Item1);
+                Console.WriteLine("{0} {1}", minId, maxId);
+                return;
+            }
         }
     }
 }
