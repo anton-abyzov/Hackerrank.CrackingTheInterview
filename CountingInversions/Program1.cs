@@ -4,20 +4,21 @@ using System.IO;
 using System.Linq;
 partial class Solution
 {
-    static void Main(String[] args)
-    {
-        var fileStream = new StreamReader("custom_input.txt");
-        int t = Convert.ToInt32(fileStream.ReadLine());
-        for (int a0 = 0; a0 < t; a0++)
-        {
-            int n = Convert.ToInt32(fileStream.ReadLine());
-            string[] arr_temp = fileStream.ReadLine().Split(' ');
-            _temp = new int[n];
-            int[] arr = Array.ConvertAll(arr_temp, Int32.Parse);
-            var count = CountInversions(arr, 0, arr.Length - 1);
-            Console.WriteLine(count);
-        }
-    }
+    //static void Main(String[] args)
+    //{
+    //    var fileStream = new StreamReader("custom_input.txt");
+    //    int t = Convert.ToInt32(fileStream.ReadLine());
+    //    for (int a0 = 0; a0 < t; a0++)
+    //    {
+    //        int n = Convert.ToInt32(fileStream.ReadLine());
+    //        string[] arr_temp = fileStream.ReadLine().Split(' ');
+    //        _temp = new int[n];
+    //        int[] arr = Array.ConvertAll(arr_temp, Int32.Parse);
+    //        CountInversions(arr, 0, arr.Length - 1);
+    //        Console.WriteLine(_count);
+    //        _count = 0;
+    //    }
+    //}
 
 
     //static void Main(String[] args)
