@@ -7,7 +7,7 @@ namespace ShortestReachInGraph
     {
         static void Main(string[] args)
         {
-            var fileStream = new StreamReader( @"F:\Projects\Testlab\HackerRank.CrackingTheInterview\ShortestReachInGraph\seed_data.txt");
+            var fileStream = new StreamReader( @"seed_data.txt");
             var q = Convert.ToInt32(fileStream.ReadLine());
             for (int i = 0; i < q; i++)
             {

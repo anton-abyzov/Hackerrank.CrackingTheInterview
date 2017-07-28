@@ -6,7 +6,7 @@ public partial class Solution
 {
     //static void Main(String[] args)
     //{
-    //    var fileStream = new StreamReader(@"F:\Projects\Testlab\HackerRank.CrackingTheInterview\IceCreamParlor\custom_input.txt");
+    //    var fileStream = new StreamReader(@"custom_input.txt");
     //    int t = Convert.ToInt32(fileStream.ReadLine());
     //    for (int a0 = 0; a0 < t; a0++)
     //    {

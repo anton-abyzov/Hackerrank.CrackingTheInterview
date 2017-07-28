@@ -17,7 +17,7 @@ namespace Tries.Contacts
             var root = new Node();
 
             var file =
-                File.ReadAllLines(@"F:\Projects\Testlab\HackerRank.CrackingTheInterview\Tries.Contacts\seed_data3.txt");
+                File.ReadAllLines(@"seed_data3.txt");
 
             for (int a0 = 0; a0 < n; a0++)
             {
