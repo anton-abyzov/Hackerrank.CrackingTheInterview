@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectedCellInGrid", "Conn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IceCreamParlor", "IceCreamParlor\IceCreamParlor.csproj", "{AF2226D6-43EB-485B-940B-DC0435BA3637}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountingInversions", "CountingInversions\CountingInversions.csproj", "{BB8324D5-BB2B-434B-8A8E-F42AD26E1BA6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +107,10 @@ Global
 		{AF2226D6-43EB-485B-940B-DC0435BA3637}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF2226D6-43EB-485B-940B-DC0435BA3637}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF2226D6-43EB-485B-940B-DC0435BA3637}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB8324D5-BB2B-434B-8A8E-F42AD26E1BA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB8324D5-BB2B-434B-8A8E-F42AD26E1BA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB8324D5-BB2B-434B-8A8E-F42AD26E1BA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB8324D5-BB2B-434B-8A8E-F42AD26E1BA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
