@@ -6,33 +6,33 @@ using System.Linq;
 public partial class Solution
 {
 
-    static void Main(String[] args)
-    {
-        int t = Convert.ToInt32(Console.ReadLine());
-        for (int a0 = 0; a0 < t; a0++)
-        {
-            int m = Convert.ToInt32(Console.ReadLine());
-            int n = Convert.ToInt32(Console.ReadLine());
-            string[] a_temp = Console.ReadLine().Split(' ');
-            int[] costs = Array.ConvertAll(a_temp, Int32.Parse);
-            Tuple<int, int>[] costsTuple = new Tuple<int, int>[n];
-            for (int i = 0; i < costs.Length; i++)
-            {
-                costsTuple[i] = new Tuple<int, int>(i + 1, costs[i]);
-            }
-            Array.Sort(costsTuple, new TupleComparer());
-            var upperBound = costsTuple.Length;
-            if (costsTuple[costsTuple.Length - 1].Item2 > m)
-            {
-                var binarySearch = Array.BinarySearch(costsTuple, new Tuple<int, int>(0, m), new TupleComparer());
-                upperBound = Math.Abs(binarySearch);
-            }
-            Tuple<int, int>[] resultedTuple = new Tuple<int, int>[upperBound];
+    //static void Main(String[] args)
+    //{
+    //    int t = Convert.ToInt32(Console.ReadLine());
+    //    for (int a0 = 0; a0 < t; a0++)
+    //    {
+    //        int m = Convert.ToInt32(Console.ReadLine());
+    //        int n = Convert.ToInt32(Console.ReadLine());
+    //        string[] a_temp = Console.ReadLine().Split(' ');
+    //        int[] costs = Array.ConvertAll(a_temp, Int32.Parse);
+    //        Tuple<int, int>[] costsTuple = new Tuple<int, int>[n];
+    //        for (int i = 0; i < costs.Length; i++)
+    //        {
+    //            costsTuple[i] = new Tuple<int, int>(i + 1, costs[i]);
+    //        }
+    //        Array.Sort(costsTuple, new TupleComparer());
+    //        var upperBound = costsTuple.Length;
+    //        if (costsTuple[costsTuple.Length - 1].Item2 > m)
+    //        {
+    //            var binarySearch = Array.BinarySearch(costsTuple, new Tuple<int, int>(0, m), new TupleComparer());
+    //            upperBound = Math.Abs(binarySearch);
+    //        }
+    //        Tuple<int, int>[] resultedTuple = new Tuple<int, int>[upperBound];
 
-            Array.Copy(costsTuple, 0, resultedTuple, 0, upperBound);
-            PrintSum(resultedTuple, m);
-        }
-    }
+    //        Array.Copy(costsTuple, 0, resultedTuple, 0, upperBound);
+    //        PrintSum(resultedTuple, m);
+    //    }
+    //}
 
     private static void PrintSum(Tuple<int, int>[] resultedTuple, int money)
     {
